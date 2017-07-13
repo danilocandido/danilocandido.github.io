@@ -8,13 +8,13 @@ layout: default
 
 <header class="masthead">
   <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.title }}<span>&#39;s blog</span></a>
+    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
   </h1>
   <nav class="masthead-nav">
 	<!-- Lê todas as páginas .md da mesma raiz deste arquivo -->
   	{% for page in site.pages %}
   		{% if page.title %}
-  			<a href="{{ page.url }}">{{page.title}}</a>
+  			<a href="{{ page.baseurl }}"> {{page.title}}</a>
   		{% endif %}
   	{% endfor%}
   </nav>

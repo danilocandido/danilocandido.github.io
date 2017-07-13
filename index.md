@@ -14,7 +14,7 @@ layout: default
 	<!-- Lê todas as páginas .md da mesma raiz deste arquivo -->
   	{% for page in site.pages %}
   		{% if page.title %}
-  			<a href="{{ page.url }}">{{page.title}}</a>
+  			<a href="{{ page.url }}"> {{page.title}}</a>
   		{% endif %}
   	{% endfor%}
   </nav>
