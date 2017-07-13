@@ -31,7 +31,7 @@ markdown: kramdown
 permalink: /:title
 
 theme: minima
-plugins:
+gems:
   - jekyll-feed
 
 # Exclude from processing.

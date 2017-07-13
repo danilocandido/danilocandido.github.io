@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Onde estou estudando Ruby On Rails"
+date:   2017-07-13 14:03:38 -0300
+categories: jekyll update
+---
+
+Comecei a estudar Ruby e o framework Rails. Quando estamos iniciando o estudo em alguma área nova sempre vem a pergunta: "Por onde começar?"
+Bem para isso eu fiz muita pesquisa em forúns, escutei podcasts e busquei guias dos principais rubystas. <br/>
+
+Segue abaixo o links:
+http://www.akitaonrails.com/2014/07/13/aprendendo-ruby-e-rails-livros-e-guias
