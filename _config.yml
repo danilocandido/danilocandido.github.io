@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Danilo Cândido Blog
+title: Danilo Cândido
 email: danilod07@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Estou aprendendo a usar o jekyll.
@@ -21,6 +21,7 @@ baseurl: "" # é a url base do site :exemplo - /minimal-blog
 url: "" # the base hostname & protocol for your site, e.g. http://www.danilo.com.br
 twitter_username: danilo765
 github_username:  danilocandido
+linkedin_username: danilocandido
 
 # Build settings
 markdown: kramdown

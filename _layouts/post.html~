@@ -8,7 +8,7 @@ comments: true
   <h1 class="post-title">{{page.title}}</h1>
   <div class="post-date">
     <time>{{page.date | date_to_string}}</time>
-    <span class="reading-time">  </span>
+    <span class="reading-time"> - 2 minutes to read </span>
   </div>
 
   {{ content }}

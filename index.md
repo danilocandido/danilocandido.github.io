@@ -7,6 +7,9 @@ layout: default
 ---
 
 <header class="masthead">
+	
+  <img src="img/danilo.jpg" class="me">
+
   <h1 class="masthead-title">
     <a href="{{ site.baseurl }}/">{{ site.title }}</a>
   </h1>
@@ -14,10 +17,31 @@ layout: default
 	<!-- Lê todas as páginas .md da mesma raiz deste arquivo -->
   	{% for page in site.pages %}
   		{% if page.title %}
-  			<a href="{{ page.url }}">{{page.title}}</a>
+  			<a href="{{ page.url }}"> {{page.title}}</a>
   		{% endif %}
   	{% endfor%}
   </nav>
+
+	<ul>
+	  {% if site.github_username %}
+		<li>
+			<a href="github.com/{{ site.github_username }}">GitHub</a><br/>
+		</li>
+	  {% endif %}
+
+	  {% if site.twitter_username %}
+		<li>
+			<a href="http://twitter.com/{{ site.twitter_username }}">Twitter</a><br/>
+		</li>
+	  {% endif %}
+	 
+	  {% if site.linkedin_username %}
+		<li>
+			<a href="http://linkedin.com/in/{{ site.linkedin_username }}">Linkedin</a>
+		</li>
+	  {% endif %}
+	</ul>
+
 </header>
 
 <div class="content list">
