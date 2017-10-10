@@ -25,7 +25,7 @@ layout: default
 	<ul>
 	  {% if site.github_username %}
 		<li>
-			<a href="github.com/{{ site.github_username }}">GitHub</a><br/>
+			<a href="http://github.com/{{ site.github_username }}">GitHub</a><br/>
 		</li>
 	  {% endif %}
 
