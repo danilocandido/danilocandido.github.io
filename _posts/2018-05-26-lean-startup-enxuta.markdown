@@ -11,14 +11,14 @@ Como desenvolvedor, além de entender a parte técnica e as regras de negócio d
 
 O objetivo da lean é desenvolver produtos e mercados
 
-1 - Early Adopters
+## 1 - Early Adopters
 
 São os primeiros usuários, talvez os mais impactantes para o negócio no início.
 O google uma vez lançou um produto grande conhecido como google wave, totalmente pronto para o uso mas não vez as validações de aceitação antes. Nãi foi um sucesso.
 
 Usuários beta que entendem que existe um problema e buscam uma solução de forma ativa.
 
-2 - Validação
+## 2 - Validação
 
 As startups validam o produto, as hipóteses de forma a validar seus interesses.
 Validar é a solução
@@ -29,19 +29,19 @@ Aprender -> Contruir -> Medir
 Medir -> Aprender -> Contruir
 Contruir -> Medir -> Aprender
 
-3 - MVP
+## 3 - MVP
 
 É um produto extraído depois dessas validações, é o conhecimento sobre o público,
 um conhecimento adquirido.
 
-4 - O que realmente o lean propões
+## 4 - O que realmente o lean propões
 
 Propões atender um determinado problema, ter um cliente desejado e buscar uma solução para esse problema.
 É preciso ter definições daquilo que se quer e para quem se quer oferecer.
 
 # Estagios do MVP
 
-1 - Exploraçaão do problema
+## 1 - Exploraçaão do problema
 
 O problema deve ser ambientado. De quem? Pra quem? Pra que?
 
@@ -49,12 +49,12 @@ O problema deve ser ambientado. De quem? Pra quem? Pra que?
 Não perguntar: Você um sistema que resolva seus problemas?
 Perguntar: Você já se deparou com isso? Sabe como resolver? Como um caso sobre esse fato? Que solução você daria.
 
-2 - Estruturação do produto vendável
+## 2 - Estruturação do produto vendável
 
 * A precificação deve ser top-down
 * O que se destacar no merdao
 * Beta. primeira versão do produto
 
-3 - Recepção
-Por meio de early adopters. Barato e rápido.
+## 3 - Recepção
 
+Por meio de early adopters. Barato e rápido.
