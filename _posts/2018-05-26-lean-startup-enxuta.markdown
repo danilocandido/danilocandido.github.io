@@ -5,7 +5,7 @@ date:   2018-05-26 18:00:38 -0300
 categories: jekyll update
 ---
 
-Como tenho trabalhado para startups e elas tem um modelo diferênte de negócio e como produzem o negócio senti a necessidade de aprender como pensar enxuto (lean). Para isso fiz um curso no Alura chamado Lean Startup: Primeiros passos da startup enxuta.
+Como tenho trabalhado para startups e elas tem um modelo diferente de negócio e como produzem o negócio senti a necessidade de aprender como pensar enxuto (lean). Para isso fiz um curso no Alura chamado Lean Startup: Primeiros passos da startup enxuta.
 
 Como desenvolvedor, além de entender a parte técnica e as regras de negócio de cada produto é preciso entender como pensam as empresas, startups. Como elas criam ou criaram o negócio que você está trabalhando.
 
@@ -41,7 +41,7 @@ Propões atender um determinado problema, ter um cliente desejado e buscar uma s
 
 # Estagios do MVP
 
-## 1 - Exploraçaão do problema
+## 1 - Exploração do problema
 
 O problema deve ser ambientado. De quem? Pra quem? Pra que?
 
@@ -52,7 +52,7 @@ Perguntar: Você já se deparou com isso? Sabe como resolver? Como um caso sobre
 ## 2 - Estruturação do produto vendável
 
 * A precificação deve ser top-down
-* O que se destacar no merdao
+* O que se destacar no mercado
 * Beta. primeira versão do produto
 
 ## 3 - Recepção
