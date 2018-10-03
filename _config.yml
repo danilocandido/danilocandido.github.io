@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Estou aprendendo a usar o jekyll.
 baseurl: "" # é a url base do site :exemplo - /minimal-blog
 url: "" # the base hostname & protocol for your site, e.g. http://www.danilo.com.br
-twitter_username: danilo765
+twitter_username: danilo_dev7
 github_username:  danilocandido
 linkedin_username: danilocandido
 
