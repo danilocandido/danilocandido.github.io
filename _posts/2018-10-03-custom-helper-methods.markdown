@@ -44,3 +44,7 @@ Nas versões dos Rails inferiores a 4 os helpers só eram carregados quando o no
 ```
 config.action_controller.include_all_helpers = false
 ```
+
+## Referências
+[Api - Ruby on Rails](https://api.rubyonrails.org/v5.1/classes/ActionController/Helpers.html)  
+[StackOverflow](https://stackoverflow.com/questions/1179865/why-are-all-rails-helpers-available-to-all-views-all-the-time-is-there-a-way-t)
