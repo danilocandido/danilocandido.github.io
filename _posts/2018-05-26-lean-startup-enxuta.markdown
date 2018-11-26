@@ -1,4 +1,5 @@
 ---
+lang: pt-br
 layout: post
 title:  "Lean Startup - Como pensar enxuto"
 date:   2018-05-26 18:00:38 -0300

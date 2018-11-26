@@ -49,7 +49,10 @@ layout: default
   {% if site.posts.size == 0 %}
     <h2>No post found</h2>
   {% else %}
-    {% for post in site.posts %}
+
+    {% assign posts = site.posts | where: "lang", "pt-br" %}
+
+    {% for post in posts  %}
       <div class="list-item">
         <h2 class="list-post-title">
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>

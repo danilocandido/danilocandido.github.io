@@ -1,4 +1,5 @@
 ---
+lang: pt-br
 layout: post
 title:  "Rails Flash Message com Boostrap"
 date:   2018-11-13 20:00:00 -0300

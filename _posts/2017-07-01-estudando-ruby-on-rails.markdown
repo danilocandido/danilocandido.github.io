@@ -1,4 +1,5 @@
 ---
+lang: pt-br
 layout: post
 title:  "Onde estudar Ruby"
 date:   2017-07-13 14:03:38 -0300

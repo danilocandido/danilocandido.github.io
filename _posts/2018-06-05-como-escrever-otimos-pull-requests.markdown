@@ -1,4 +1,5 @@
 ---
+lang: pt-br
 layout: post
 title:  "Como descrever Commits e Pull Requests"
 date:   2018-06-05 18:16:38 -0300
