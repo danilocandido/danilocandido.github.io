@@ -15,7 +15,7 @@ ruby >= 2
 
 ## Let's start
 We will use rails-api only and skip tests(because RSspec will be used)  
-> rails new json-api --api  
+> rails new json-api --api -T
 > cd json-api  
 > bundle install
 
@@ -23,12 +23,19 @@ Open your Gemfile and add these gems
 > gem 'jsonapi-resources'   
   gem 'rack-cors'  
 
-then `bundle install` again to install these dependencies
+> group :development, :test do
+    gem 'rspec-rails', '~> 3.8'
+    gem 'factory_bot_rails'
+  end
+
+then run `bundle install` again to complete the instalation dependencies
+
+![rails image server started](https://edgeguides.rubyonrails.org/images/getting_started/rails_welcome.png  "rails s" )
 
 ## The project
 Change the inheritance from ApplicationController from `ActionController::API` to `JSONAPI::ResourceController`. 
 
-Your controller should be like this
+Your controller should be like this replace `ActionController::API`
 ``` ruby
 class ApplicationController < JSONAPI::ResourceController
   protect_from_forgery with: :null_session, if: Proc.new {|c| c.request.format.json? }
@@ -37,15 +44,26 @@ end
 
 Generate a model
 > rails g model page content
+> rails db:migrate
 
 Generate a controller 
 > rails generate jsonapi:controller api::v1::page
 
 app/controllers/api/v1/pages_controller.rb
+here you'll have to use `ApplicationController` instead of `JSONAPI::ResourceController`
+
 ``` ruby
 class Api::V1::PagesController < ApplicationController
 end
 ```
+
+## Create our resources directory
+Create a resource for our model Page. But first create a directory.
+
+> mkdir -p app/resources/api/v1
+
+### create the resource itself
+page_resource.rb
 
 app/resources/api/v1/page_resource.rb
 ``` ruby
@@ -85,6 +103,10 @@ rails routes
 > POST  /api/v1/pages(.:format)  api/v1/pages#create
 
 ## calling api
+  Header
+      Content-Type: application/vnd.api+json
+      Accept: application/vnd.api+json
+
 GET  localhost:3000/api/v1/pages
 
 --
