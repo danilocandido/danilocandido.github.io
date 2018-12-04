@@ -130,6 +130,7 @@ POST localhost:3000/api/v1/pages
 
 
 ## Referências
+[Check this project on GitHub](https://github.com/danilocandido/api-page-parser)  
 [Json:api specification](https://jsonapi.org/)  
-[Json API Ruby Implementation](https://github.com/cerebris/jsonapi-resources) 
-[JSON API Easy Mode](https://www.hark.bz/blog/post/json-api-easy-mode/) 
+[Json API Ruby Implementation](https://github.com/cerebris/jsonapi-resources)  
+[JSON API Easy Mode](https://www.hark.bz/blog/post/json-api-easy-mode/)  
