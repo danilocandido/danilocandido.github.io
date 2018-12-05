@@ -184,7 +184,7 @@ open http://localhost:3000
 
 You can see and run the whole project on [GitHub - ClickFile](https://github.com/danilocandido/click-file)  
 
-## Referências
+## References
 [Check this project on GitHub](https://github.com/danilocandido/click-file)  
 [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html)  
 [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)  
