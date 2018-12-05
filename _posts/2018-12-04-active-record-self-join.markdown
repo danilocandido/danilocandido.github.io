@@ -73,12 +73,7 @@ class FileSystem < ApplicationRecord
 
   scope :roots, -> { where('parent_id is null') }
 
-  validates :name, length: { minimum: 1 }, if: :folder?
   validate :only_folder_should_have_children
-
-  before_save do
-    self.name = attached_file.filename if file?
-  end
 
   def text
     name || attached_file.filename
@@ -90,14 +85,6 @@ class FileSystem < ApplicationRecord
 
   def folder?
     !file
-  end
-
-  def as_json(options = {})
-    options = { id: id, text: text }
-    options[:children] = children unless children.empty?
-    options[:icon] = 'jstree-file' if file?
-    options[:is_file] = folder?
-    options
   end
 
   private
@@ -133,10 +120,69 @@ With `has_many` we did a relation with its children, in other words, models who 
 has_many :children, class_name: 'FileSystem', foreign_key: 'parent_id'
 ```
 
-## The FrontEnd
+### your FileSystemController
+``` ruby
+# app/controllers/file_systems_controller.rb
+class FileSystemsController < ApplicationController
+  def index; end
 
+  def show_files
+    file_systems = FileSystem.roots
+    render json: file_systems
+  end
+end
+```
+
+## Routes
+``` ruby
+Rails.application.routes.draw do
+  root to: 'file_systems#index'
+
+  resources :file_systems, only: :index
+  get '/file_systems/show_modal/:id', to: 'file_systems#show_modal', as: :show_modal_upload
+end
+```
+
+## The FrontEnd
+In the frontend as I said above, we will use JS-Tree CND
+
+add these scripts to your app/views/layouts/application.html.erb  
+
+``` HTML
+<head>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/themes/default/style.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/jstree.min.js"></script>
+</head>
+```
+
+open your app/views/file_systems/index.html.erb
+
+> show_files_file_systems_path is your route path
+
+``` HTML
+<div id="js_tree"></div>
+<script>
+  $(function() {
+    $('#js_tree').jstree({
+      'core' : {
+        'data' : {
+          "url" : "<%= show_files_file_systems_path %>",
+          "dataType" : "json"
+        }
+      }
+    });
+  });
+</script>
+```
+
+open http://localhost:3000  
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="kRcszOn"><a href="//imgur.com/kRcszOn">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
+
+You can see the whole project on [GitHub](https://github.com/danilocandido/click-file)  
 
 ## Referências
-[Check this project on GitHub](https://github.com/danilocandido/api-page-parser)  
+[Check this project on GitHub](https://github.com/danilocandido/click-file)  
 [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html)  
 [Active Record Basics](https://guides.rubyonrails.org/active_record_basics.html)  
