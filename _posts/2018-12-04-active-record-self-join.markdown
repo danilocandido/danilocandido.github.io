@@ -7,9 +7,8 @@ categories: jekyll update
 ---
 
 ## Objective
-Build a model layer of an file system, creating files and directories and persisting into a SQL database.  
+Build a file system model layer, creating files and directories.  
 - We can have folders, sub-folders and files
-- We'll also use Active Storage
 - JS-Tree lib javascript
 
 ### Prerequisites
@@ -20,7 +19,7 @@ We are going to skip test(We will use rspec), turbolinks, action-mailer and coff
 > rails new click-file -T --skip-turbolinks --skip-action-mailer --skip-coffee
 
 ### Configurations
-Open the Gemfile to add gems
+Open the Gemfile to add these gems
 
 ``` ruby
 group :development, :test do
@@ -65,19 +64,15 @@ Now we'll edit our file_system.rb class
 ``` ruby
 # app/models/file_system.rb
 class FileSystem < ApplicationRecord
-  # this is the self-join in Model
-  belongs_to :folder, class_name: 'FileSystem', optional: true
+  # this is the self-join association
+  belongs_to :parent, class_name: 'FileSystem', optional: true
   has_many :children, class_name: 'FileSystem', foreign_key: 'parent_id'
-
-  has_one_attached :attached_file
 
   scope :roots, -> { where('parent_id is null') }
 
   validate :only_folder_should_have_children
 
-  def text
-    name || attached_file.filename
-  end
+  alias_attribute :text, :name
 
   def children?
     children.exists?
@@ -98,19 +93,26 @@ end
 
 ```
 
-## Now let's explain what we just did
+## Let's explain what we just did
 
 ### belongs_to :folder
-A file or directory normally belongs to another folder.  
-  - my_music (directory)
-    - fear_od_the_dark.mp3 (file, parent=my_music)
-    - fear_od_the_dark.mp3 (file, parent=my_music)
+A file or directory normally belongs to another folder. Example: a music_directory can have two files into it. 
+- Both directory and a file should have parent
+- A directory should have Children
+- A file should not have any Children  
+
+```
+- my_music (directory)
+  - fear_of_the_dark.mp3 (file, parent=my_music)
+  - two_minutes_to_midnight.mp3 (file, parent=my_music)
+```
 
 
 ``` ruby
-belongs_to :folder, class_name: 'FileSystem', optional: true
+belongs_to :parent, class_name: 'FileSystem', optional: true
 ```
 A folder/file belongs to a Model (FileSystem - itself)
+Here I used optional: true because I ran this project in Rails 5 and in this Rails version all relations are required. *But not all files should have parents*.
 
 ### has_many :children
 As a folder/directory our model can have children, that are sub-folders or files into it.
@@ -180,7 +182,7 @@ open http://localhost:3000
 <blockquote class="imgur-embed-pub" lang="en" data-id="kRcszOn"><a href="//imgur.com/kRcszOn">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
-You can see the whole project on [GitHub](https://github.com/danilocandido/click-file)  
+You can see and run the whole project on [GitHub - ClickFile](https://github.com/danilocandido/click-file)  
 
 ## Referências
 [Check this project on GitHub](https://github.com/danilocandido/click-file)  
