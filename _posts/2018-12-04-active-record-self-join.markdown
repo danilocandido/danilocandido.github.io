@@ -19,17 +19,7 @@ We are going to skip test(We will use rspec), turbolinks, action-mailer and coff
 > rails new click-file -T --skip-turbolinks --skip-action-mailer --skip-coffee
 
 ### Configurations
-Open the Gemfile to add these gems
-
-``` ruby
-group :development, :test do
-  gem 'rspec-rails', '~> 3.8'
-  gem 'factory_bot_rails'
-  gem 'rails-controller-testing'
-end
-```
-
-Then it's time to add yarn dependencies
+Tt's time to add yarn dependencies
 ```
 yarn add jquery
 ```
@@ -182,7 +172,7 @@ open http://localhost:3000
 <blockquote class="imgur-embed-pub" lang="en" data-id="kRcszOn"><a href="//imgur.com/kRcszOn">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 
-You can see and run the whole project on [GitHub - ClickFile](https://github.com/danilocandido/click-file)  
+You can see and run the whole project with specs on [GitHub - ClickFile](https://github.com/danilocandido/click-file)  
 
 ## References
 [Check this project on GitHub](https://github.com/danilocandido/click-file)  
